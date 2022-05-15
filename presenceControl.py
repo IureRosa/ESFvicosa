@@ -20,7 +20,7 @@ pastaApp = os.path.dirname(__file__)
 #Recolhendo nomes a partir do ID
 listaN = []
 listaS = []
-with open(pastaApp+"//dados.csv", "r") as file:
+with open(pastaApp+"//dados/dados.csv", "r") as file:
     rd = csv.DictReader(file)
     for linha in rd:
         #print("{0} - {1}".format(linha['Nome'], linha['ID']))
@@ -67,16 +67,16 @@ def cadastraPresenca(tv):
         messagebox.showerror(title='Controle de Presença', message=msg_error)
 app = tk.Tk()
 
-imgWorkspace=PhotoImage(file=pastaApp+"//workBitch21.gif")
+imgWorkspace=PhotoImage(file=pastaApp+"//images/workBitch21.gif")
 work_gif=Label(app, image=imgWorkspace, background='#43a173')
 work_gif.place(x=250, y=60)
 
 
-imgLogo=PhotoImage(file=pastaApp+"//logoP2.png")
+imgLogo=PhotoImage(file=pastaApp+"//images/logoP2.png")
 logo=Label(app, image=imgLogo, background='#43a173')
 logo.place(x=10, y=10, width=100, height=45)
 
-app.tk.call('wm', 'iconphoto', app._w, tk.PhotoImage(file=pastaApp+"//logoP.png"))
+app.tk.call('wm', 'iconphoto', app._w, tk.PhotoImage(file=pastaApp+"//images/logoP.png"))
 
 garamInfo = tkFont.Font(family='Garamond', size=10, weight=tkFont.NORMAL)
 garamTitle = tkFont.Font(family='Garamond', size=22, weight=tkFont.BOLD)
